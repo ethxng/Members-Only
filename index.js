@@ -28,7 +28,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
 
 // set up passport for authentication
-app.use(session({secret: process.env.PASSPORT_SECRET, resave: false, saveUninitialized: true}));
+app.use(session({secret: "cats", resave: false, saveUninitialized: true}));
 passport.use(
     new LocalStrategy((username, password, done) => {
         User.findOne({username: username}, (err, user) => {
