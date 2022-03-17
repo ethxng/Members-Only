@@ -22,7 +22,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 
-const mongoDB = process.env.mongoDB_URL;
+const mongoDB = process.env.MONGODB;
 mongoose.connect(mongoDB, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
