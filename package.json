@@ -1,0 +1,37 @@
+{
+  "name": "members-only",
+  "version": "1.0.0",
+  "description": "In this project, I attempted to host an application where only exclusive members have the ability to post messages. The rest would still be able to see the messages, but only anonymously. I also attempted to replicate the moderator by having an admin to delete any inappropriate messages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devserver": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethxng/Members-Only.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethxng/Members-Only/issues"
+  },
+  "homepage": "https://github.com/ethxng/Members-Only#readme",
+  "dependencies": {
+    "async": "^3.2.3",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.2.6",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2"
+  }
+}

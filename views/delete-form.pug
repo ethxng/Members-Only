@@ -1,0 +1,9 @@
+extends layout 
+
+block content 
+  h1 DO YOU REALLY WANT TO DELETE THIS MESSAGE?
+  form(action='', method="POST")
+    button Delete
+  br
+  br
+  a(href='/messages') No, go back

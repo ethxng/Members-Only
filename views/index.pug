@@ -1,0 +1,25 @@
+extends layout 
+
+block content 
+  body(style="background-color: #ADD8E6")
+  h1(style="text-align: center; font-size: 40px; color: #FFD580; font-weight: bold") All messages 
+  a(href='/log-out', style="font-size: 35px; color: red; float: right") Log Out
+  br
+  br
+  a(href='/messages/create', style="font-size: 30px; color: blue") Create a message
+  br
+  br
+  if (messages.length === 0)
+    h1 No message yet. Write something!
+  else
+    .body(style="display:flex")
+    each message in messages  
+      .box(style="border: 5px solid lightyellow; height: auto; width: auto; padding: 10px; margin-bottom: 10px")  
+        if (admin)
+          a(href = `/messages/${message._id}/delete`, style="font-size: 20px; color: red") Delete 
+        p(style="font-weight: bold; font-size: 25px; color: #449e48")=message.title 
+        p(style="font-size: 20px")= message.text 
+        if(creator)
+          p(style="text-align: right; font-size: 18px") Created by #{message.creator.username}
+        else
+          p(style="text-align: right; font-size: 18px") Created anonymously 

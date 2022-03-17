@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1(style="text-align: center; font-size: 40px; color: gray; font-weight: bold") Ready to become a member? 
+  form(action='', method="POST")
+    label(style="color: red; font-size: 30px") Enter the code here: 
+    br
+    br
+    input(type="password", name='member_code')
+    br 
+    p Hint: I am you, but I am black (even if you are already black). 
+    br
+    button(type='submit', style='font-size: 30px') Submit

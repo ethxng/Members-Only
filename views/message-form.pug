@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  h1(style="text-align: center; font-size: 40px; color: #FFD580; font-weight: bold") Submit a message
+  form(action='', method="POST")
+    label(for='title') Title: 
+    input(type="text", name="title", required=true)
+    br
+    br
+    label(for='text') Text: 
+    textarea(type="text", name="text", required = true)
+    br
+    br
+    button(type="submit") Submit
+  

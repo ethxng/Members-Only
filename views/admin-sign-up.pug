@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  h1(style="text-align: center; font-size: 40px; color: gray; font-weight: bold") Ready to become an admin?
+  form(action='', method="POST")
+    label(style="color: red; font-size: 30px") Enter the code here: 
+    br
+    br
+    input(type="password", name='admin_code')
+    br 
+    p Hint: Reply to this line 
+    p Wow, that's really hard. You really think you can go all day long?
+    br
+    button(type='submit', style='font-size: 30px') Submit
+  
